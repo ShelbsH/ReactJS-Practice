@@ -7,16 +7,19 @@ class NameForm extends React.Component {
     this.handleValues = this.handleValues.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
-    this.state = {
+  }
+
+  componentWillMount() {
+    this.setState({
       value: '',
       arr: []
-    };
+    });
   }
 
   handleValues(evt) {
     this.setState({
       value: evt.target.value
-    })
+    });
   }
 
   handleSubmit(evt) {
@@ -35,7 +38,11 @@ class NameForm extends React.Component {
         <input type="text" onChange={this.handleValues} value={this.state.value} />
         <button onClick={this.handleSubmit} className="btn">Submit Values</button>
         <table className="table-striped">
-          <th>Added Item</th>
+          <thead>
+            <tr>
+              <th>Added Item</th>
+            </tr>
+          </thead>
           <tbody>
             {this.state.arr.map((items, index) => {
               return (<tr key={index}><td>
