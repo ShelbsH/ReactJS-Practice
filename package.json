@@ -2,12 +2,19 @@
   "name": "beginner-application",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "collectCoverage": true
+  },
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
     "enzyme": "^2.8.0",
+<<<<<<< HEAD
+=======
+    "react-addons-test-utils": "^15.5.1",
+>>>>>>> d396a56f627f229a0284c9452df468c1564e35d2
     "react-scripts": "0.9.5"
   },
   "scripts": {
